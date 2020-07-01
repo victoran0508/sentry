@@ -44,10 +44,6 @@ class OnboardingStatus extends React.Component<Props> {
   render() {
     const {collapsed, org, currentPanel, orientation, hidePanel, showPanel} = this.props;
 
-    if (!(org.features && org.features.includes('onboarding'))) {
-      return null;
-    }
-
     const tasks = getMergedTasks(org);
 
     const allDisplayedTasks = tasks.filter(task => task.display);
